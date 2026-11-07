@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Body */
+  --bg-color: #f5f5f5;
+
+  /* Label Color */
+  --label-red: rgba(200, 0, 0, 0.65);
+  --label-blue: rgba(0, 0, 200, 0.65);
+  --label-green: rgba(0, 200, 0, 0.65);
+  --label-enclosed-bg-color: rgba(186, 186, 186, 0.65);
+
+  /* header Variables */
+  --header-bg-color: rgba(0, 0, 0, 0.65);
+  --header-bg-color-hovered: rgba(0, 0, 0, 0.725);
+  --header-text-color: #ffffff;
+  --header-font-weight: 700;
+  --header-nav-color: white;
+
+  /* About Variables */
+  --about-bg-color: rgba(255, 176, 176, 0.65);
+
+  /* Experience Section Variables */
+  --experience-card-bg-color: rgb(170, 177, 255);
+
+  /* Project Card Variables */
+  --projects-card-bg-color: rgb(170, 255, 180);
+
+  /* Font Sizes */
+  --font-h1-size: clamp(2.5rem, 3.5vw, 3rem);
+  --font-paragraph-size: clamp(0.875rem, 1.5vw, 1.25rem);
+  --font-link-size: clamp(0.875rem, 1.5vw, 1.25rem);
+  --font-link-header-size: clamp(0.75rem, 1.5vw, 1.25rem);
+  --font-label-size: clamp(0.7rem, 1.2vw, 1.05rem);
+
+  /* Font Properties */
+  --font-family: "Montserrat", "Arial", sans-serif;
+  --font-line-height: 1.5;
+
+  /* Button Properties */
+  --btn-bg-color: #ffa500;
+  --btn-bg-color-hovered: rgb(196, 127, 0);
+}
+
+/* Elements  */
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  font-size: var(--font-paragraph-size);
+}
+
+h1 {
+  font-size: var(--font-h1-size);
+}
+
+p {
+  font-size: var(--font-paragraph-size);
+  margin: 0px 0px 8px;
+}
+
+a {
+  font-size: var(--font-paragraph-size);
+}
+
+/* Body Container */
+
+.body__container {
+  padding: 0px 10px;
+}
+
+/* Reusable designs */
+.glassmorphism {
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(128, 128, 128, 0.169);
+  box-shadow: inset 4px 12px 32px rgba(255, 255, 255, 0.313);
+}
+
+.glassmorphism_label {
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(128, 128, 128, 0.169);
+  box-shadow: inset 2px 8px 8px rgba(255, 255, 255, 0.65);
+  border-radius: 64px;
+}
+
+.glassmorphism_button {
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(128, 128, 128, 0.169);
+  box-shadow: inset 2px 8px 8px rgba(255, 255, 255, 0.65);
+  border-radius: 16px;
+  padding: 8px;
+}
+
+/* Reusable Classes */
+.narrow {
+  max-width: 640px;
+}
+
+.normal {
+  max-width: 960px;
+}
+
+.wide {
+  max-width: 1440px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.centered {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.label {
+  font-size: var(--font-label-size);
+  margin-block: 4px;
+}
+
+.label_enclosed {
+  padding: 6px;
+  background-color: var(--label-enclosed-bg-color);
+  cursor: default;
+}
+
+.label_red {
+  background-color: var(--label-red);
+}
+
+.label_blue {
+  background-color: var(--label-blue);
+}
+
+.label_green {
+  background-color: var(--label-green);
+}
+/* Header */
+header {
+  max-width: 900px;
+  top: 10px;
+  margin: auto;
+  position: sticky;
+  margin-block: 10px;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 12px;
+  align-items: center;
+  background-color: var(--header-bg-color);
+  border-radius: 64px;
+  height: 60px;
+  transition: background-color 200ms;
+
+  /* Glassmorphism Design */
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(128, 128, 128, 0.516);
+  box-shadow: inset 4px 12px 32px rgba(255, 255, 255, 0.313);
+}
+
+.header__container:hover {
+  background-color: var(--header-bg-color-hovered);
+}
+
+.header__logo {
+  display: flex;
+  flex-flow: row;
+}
+
+.header__container_logo > a > img {
+  max-width: 40px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.header__menu {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+}
+
+.header__item {
+  margin-inline: 8px;
+}
+
+.header__item > a {
+  color: var(--header-text-color);
+  text-decoration: none;
+  font-weight: var(--header-font-weight);
+  position: relative;
+  font-size: var(--font-link-header-size);
+}
+
+.header__item > a::after {
+  background-color: var(--header-nav-color);
+  border-radius: 12px;
+  position: absolute;
+  content: " ";
+  width: 0%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  transition: width 200ms;
+}
+
+.header__item > a:hover::after {
+  width: 100%;
+}
+
+/* Main */
+
+main,
+section {
+  margin: 5px auto;
+}
+
+/* Hero */
+.hero__container {
+  min-height: 500px;
+  display: flex;
+  flex-flow: row;
+  gap: 5px;
+}
+
+.hero__container > div {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.hero__introduction {
+  align-items: flex-start;
+}
+
+.hero__myself {
+  align-items: flex-end;
+}
+
+.hero__mySelfImg > img {
+  border: 1px solid gray;
+  border-radius: 50%;
+  max-width: 400px;
+  pointer-events: none;
+}
+
+/* About */
+.about {
+  padding: 75px 0px 0px;
+}
+
+.about__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+  background-color: var(--about-bg-color);
+  border-radius: 48px;
+}
+
+/* Experience */
+.experience__container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  padding: 75px 0px;
+}
+
+.experience__title > h1 {
+  text-align: center;
+  margin: 8px;
+}
+
+.experience__card_container {
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+}
+
+/* Experience Cards */
+.experience__card {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: var(--experience-card-bg-color);
+  padding: 4px 12px;
+  /* Glassmorphism */
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(128, 128, 128, 0.169);
+  box-shadow: inset 16px 16px 24px rgba(255, 255, 255, 0.65);
+  border-radius: 48px;
+  gap: 16px;
+
+  /* Animation */
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+}
+
+.exp__card_img > img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+/* Project */
+.projects__container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 75px 0px;
+}
+
+.projects__title > h1 {
+  text-align: center;
+  margin: 8px;
+}
+
+.projects__card_container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 12px;
+}
+
+.projects__card {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: var(--projects-card-bg-color);
+  padding: 4px 12px;
+  /* Glassmorphism */
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(128, 128, 128, 0.169);
+  box-shadow: inset 16px 16px 24px rgba(255, 255, 255, 0.65);
+  border-radius: 48px;
+  gap: 16px;
+}
+
+/* Contact */
+.contact__container {
+  padding: 75px 0px 135px;
+}
+
+.contact__title > h1 {
+  text-align: center;
+  margin: 8px;
+}
+
+.contact__links {
+  margin: 48px 0px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact__links > ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+}
+
+.contact__links > ul > li {
+  list-style: none;
+}
+
+.contact__links > ul > li > a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  background-color: var(--btn-bg-color);
+  transition: background-color 200ms;
+  min-width: 100px;
+  text-align: center;
+}
+
+.contact__links > ul > li > a:hover {
+  background-color: var(--btn-bg-color-hovered);
+}
+
+/* Animation */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px) rotateY(90deg) rotateX(90deg) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg) rotateX(0deg) scale(1);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+}
+
+/* Mobile Design */
+
+@media screen and (max-width: 768px) {
+  .glassmorphism_label {
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .hero__container {
+    flex-flow: column-reverse nowrap;
+  }
+
+  .hero__myself {
+    align-items: center;
+  }
+
+  .hero__introduction {
+    align-items: center;
+  }
+
+  .contact__links > ul {
+    flex-flow: column nowrap;
+    min-width: 100%;
+  }
+}
