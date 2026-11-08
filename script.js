@@ -13,4 +13,4 @@ let ticker = setInterval(() => {
     // Update Date
     let date = new Date()
     clock.textContent = `${formatter.format(date)}`
-}, 500)
+}, 1000)
