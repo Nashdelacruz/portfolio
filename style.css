@@ -46,7 +46,7 @@
   --font-label-size: clamp(0.7rem, 1.2vw, 1.05rem);
 
   /* Font Properties */
-  --font-family: "Montserrat", "Arial", sans-serif;
+  --font-family: "Montserrat", system-ui, "Arial", sans-serif;
   --font-line-height: 1.5;
 
   /* Button Properties */
@@ -55,6 +55,10 @@
 }
 
 /* Elements  */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-color);
   font-family: var(--font-family);
@@ -460,7 +464,6 @@ section {
     text-align: center;
   }
 }
-
 
 /* Error Page */
 .error__container {
