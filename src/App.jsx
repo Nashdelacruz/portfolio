@@ -122,6 +122,8 @@ function Experiences() {
         </div>
         <div className="experience__card_container">
           {/* Experience Card */}
+          <ExperienceCard period="2026-Present" title="Software Developer Cadet" organization="Google Developer Groups on Campus
+Polytechnic University of the Philippines"/>
           <ExperienceCard
             period="2026-present"
             title="OBS Operator"
