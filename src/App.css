@@ -485,3 +485,9 @@ section {
 .error__button > a:hover {
   background-color: var(--btn-bg-color-hovered);
 }
+
+/* Additional Features */
+
+.project__card_link > a {
+  text-decoration: none;
+}
