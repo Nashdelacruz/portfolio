@@ -5,7 +5,7 @@ import AboutMe from "./components/About.jsx";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
-
+import Gallery from "./components/Gallery.jsx";
 // App.jsx
 
 export default function App() {
@@ -29,6 +29,8 @@ export default function App() {
         <Experiences />
         {/* Projects */}
         <Projects />
+        {/* Galleries */}
+        <Gallery />
         {/* Contact */}
         <Contacts />
       </div>
