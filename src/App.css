@@ -401,6 +401,7 @@ section {
 .contact__links > ul {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: 8px;
 }
 
@@ -408,17 +409,16 @@ section {
   list-style: none;
 }
 
-.contact__links > ul > li > a {
+.contact__links > ul > li > button {
   display: block;
   text-decoration: none;
   color: black;
   background-color: var(--btn-bg-color);
   transition: background-color 200ms;
   min-width: 100px;
-  text-align: center;
 }
 
-.contact__links > ul > li > a:hover {
+.contact__links > ul > li > button:hover {
   background-color: var(--btn-bg-color-hovered);
 }
 

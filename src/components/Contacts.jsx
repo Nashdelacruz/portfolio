@@ -27,14 +27,22 @@ function ContactList() {
     <ul>
       {contacts.map((contacts) => (
         <li key={contacts.id}>
-          <a
-            href={contacts.link}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => {
+              // Anti-scraping measure: Confirm before opening mailto links
+              if (contacts.link.startsWith("mailto:")) {
+                let confirmation = confirm("Click OK to send an email.\nThis is a security measure to prevent scraping.");
+                if (confirmation) {
+                  window.location.href = contacts.link;
+                }
+              } else {
+                window.open(contacts.link, "_blank");
+              }
+            }}
             className="glassmorphism_button"
           >
             {contacts.website}
-          </a>
+          </button>
         </li>
       ))}
     </ul>
