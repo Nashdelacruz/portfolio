@@ -51,7 +51,7 @@ export default function Projects() {
             period="2026"
             title="ChurchSpace"
             description="Won first place at #HackLaguna 2026 held at Binan, Laguna. It focuses seven problems with three core features which are gamified social feeds, separate forms for prayer request, and more!"
-            projectSrc="test"
+            projectSrc="https://github.com/mang2mas/TeamD_Alorika_Churchspace-Parable"
           />
           <ProjectCards
             period="2026"
